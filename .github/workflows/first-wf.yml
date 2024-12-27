@@ -10,10 +10,19 @@ jobs:
         run: echo "Hello world !"
       - name: step 2
         uses: actions/checkout@v4
+      - name: Create artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my_repo_content
+          path: .
       - name: List Files
         run: ls -ltra
   job_2:
     runs-on: ubuntu-22.04
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my_repo_content
       - name: List Files
         run: ls -ltra
