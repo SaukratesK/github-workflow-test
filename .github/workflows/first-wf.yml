@@ -18,6 +18,7 @@ jobs:
       - name: List Files
         run: ls -ltra
   job_2:
+    needs: hello
     runs-on: ubuntu-22.04
     steps:
       - name: Download artifact
