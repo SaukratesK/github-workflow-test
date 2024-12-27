@@ -1,0 +1,4 @@
+on:
+  push:
+  workflow-dispatch;
+name: My First Workflow
