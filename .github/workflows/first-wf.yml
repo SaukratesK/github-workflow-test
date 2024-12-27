@@ -6,6 +6,10 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Fisrt step
+      - name: step 1
         run: echo "Hello world !"
-         
+      - name: step 2
+        uses: actions/checkout@v4
+  job_2:
+      - name: List Files
+        run: ls -ltra
