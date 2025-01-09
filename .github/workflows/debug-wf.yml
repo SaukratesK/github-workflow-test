@@ -1,0 +1,15 @@
+name: degub WF
+
+on: 
+  workflow_dispatch:
+
+env: 
+  USER_1: "foo-user"
+  USER_2: "bar-user"
+
+jobs:
+  debug_job:
+    steps:
+      - name: Step 01
+        run: echo ${{ USER_1 }}
+
