@@ -9,6 +9,7 @@ env:
 
 jobs:
   debug_job:
+    runs-on: ubuntu-latest
     steps:
       - name: Step 01
         run: echo ${{ USER_1 }}
