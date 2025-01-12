@@ -13,4 +13,9 @@ jobs:
     steps:
       - name: Step 01
         run: echo $USER_1 
+      - name: Set USERNAME as USER_1
+        run: echo "USERNAME=$USER_1" >> $GITHUB_ENV  # Permet de mettre une variable comme var d'env reutilisable dans le WF
+      - name : Printing Username
+        run: echo $USERNAME
+
 
